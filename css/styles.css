@@ -21,6 +21,7 @@
   --mist: #EEF8F5;
   --charcoal: #1C2726;
   --white: #FFFFFF;
+  --error: #B42318; /* used only for form error messages */
 
   --font-heading: Georgia, "Times New Roman", serif;
   --font-body: Arial, Helvetica, sans-serif;
@@ -488,6 +489,245 @@ textarea:focus-visible {
   accent-color: var(--teal);
 }
 
+/* Validation feedback (added by JavaScript) */
+
+.field-error {
+  color: var(--error);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0.25rem 0 0;
+}
+
+.field-error::before {
+  content: "\26A0  ";
+}
+
+[aria-invalid="true"] {
+  border-color: var(--error) !important;
+  background: var(--white);
+}
+
+.char-count {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--charcoal);
+}
+
+.notice {
+  background: var(--mist);
+  border-left: 6px solid var(--mint);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.notice-success {
+  border-left-color: var(--teal);
+}
+
+.link-button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 700;
+  color: var(--teal);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Services: Find Your Way to Help (JavaScript feature) ---------- */
+
+.filter-buttons button,
+.save-button,
+.remove-button {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.finder {
+  border: 3px solid var(--mint);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.finder-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filter-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-group legend {
+  padding: 0;
+  margin-bottom: var(--space-1);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.filter-buttons button {
+  padding: 0.55rem 1.1rem;
+  background: var(--white);
+  color: var(--teal);
+  border: 2px solid var(--teal);
+}
+
+.filter-buttons button[aria-pressed="true"] {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.filter-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.finder-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.finder-layout > div {
+  flex: 1;
+}
+
+.result-count {
+  font-weight: 700;
+}
+
+.opportunity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opportunity {
+  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--mist);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+  border: 2px solid transparent;
+}
+
+.opportunity.is-saved {
+  border-color: var(--teal);
+}
+
+.opportunity h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+  background: var(--mint);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.opportunity .meta {
+  font-size: 0.95rem;
+}
+
+.save-button {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  color: var(--teal);
+  border: 2px solid var(--teal);
+}
+
+.save-button[aria-pressed="true"] {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.interest-panel {
+  background: var(--teal);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  align-self: flex-start;
+  width: 100%;
+}
+
+.interest-panel h3 {
+  color: var(--white);
+}
+
+.interest-panel .button {
+  background: var(--mint);
+  color: var(--charcoal);
+  border-color: var(--mint);
+}
+
+.interest-panel .button:hover {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.interest-list {
+  list-style: none;
+  padding: 0;
+}
+
+.interest-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.remove-button {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--mint);
+}
+
+[hidden] {
+  display: none !important;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -564,6 +804,12 @@ textarea:focus-visible {
     flex-basis: 40%;
   }
 
+  .finder-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
 /* ==========================================================================
@@ -601,4 +847,14 @@ textarea:focus-visible {
     top: var(--space-2);
   }
 
+  .finder-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .interest-panel {
+    flex: 0 0 18rem;
+    position: sticky;
+    top: var(--space-2);
+  }
 }

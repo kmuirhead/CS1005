@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Twin Cities Animal Rescue or submit a volunteer or foster interest form.">
+  <title>Contact &amp; Get Involved | Twin Cities Animal Rescue</title>
+  <link rel="icon" type="image/png" href="images/rescue-logo_c.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/storage.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html"><img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue home" width="120" height="111"></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Adopt, Foster &amp; Volunteer</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" aria-current="page">Contact &amp; Get Involved</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1>Contact Us and Get Involved</h1>
+    <p class="lead">Interested in volunteering, fostering, or adopting?<br>Fill out the form below and a member of our team will reach out within three business days.</p>
+
+    <div class="contact-layout">
+      <section class="form-section">
+        <h2>Volunteer and Foster Interest Form</h2>
+        <form id="interest-form" action="#" method="post">
+          <fieldset>
+            <legend>Your Contact Information</legend>
+            <p class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="80" required>
+            </p>
+            <p class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your Interest</legend>
+            <p class="field">
+              <label for="interest">I am interested in</label>
+              <select id="interest" name="interest" required>
+                <option value="">Select an option</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="foster">Fostering</option>
+                <option value="adoption">Adoption information</option>
+              </select>
+            </p>
+            <p class="field">
+              <label for="availability">General availability</label>
+              <select id="availability" name="availability" required>
+                <option value="">Select your availability</option>
+                <option value="weekday-mornings">Weekday mornings</option>
+                <option value="weekday-evenings">Weekday evenings</option>
+                <option value="weekends">Weekends</option>
+                <option value="flexible">Flexible</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset id="experience-group">
+            <legend>Experience with Pets</legend>
+            <p class="choice">
+              <input type="radio" id="exp-none" name="experience" value="none" required>
+              <label for="exp-none">No experience yet</label>
+            </p>
+            <p class="choice">
+              <input type="radio" id="exp-owner" name="experience" value="owner">
+              <label for="exp-owner">I have owned pets</label>
+            </p>
+            <p class="choice">
+              <input type="radio" id="exp-rescue" name="experience" value="rescue">
+              <label for="exp-rescue">I have fostered or volunteered with a rescue</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Message</legend>
+            <p class="field">
+              <label for="message">Tell us a little about yourself (20 to 500 characters)</label>
+              <textarea id="message" name="message" rows="5" cols="40" minlength="20" maxlength="500" required></textarea>
+            </p>
+          </fieldset>
+
+          <p><button class="button" type="submit">Submit Interest Form</button></p>
+        </form>
+      </section>
+
+      <div class="contact-details">
+        <section class="card">
+          <h2>Service Area</h2>
+          <p>We serve Minneapolis, St. Paul, and the surrounding communities, including Bloomington, Roseville, Edina, Maplewood, and Brooklyn Park.</p>
+          <p>Foster homes must be located within 30 miles of our adoption center.</p>
+        </section>
+
+        <section class="card">
+          <h2>Office Hours</h2>
+          <ul class="hours">
+            <li>Monday through Friday: 10:00 a.m. to 6:00 p.m.</li>
+            <li>Saturday: 9:00 a.m. to 4:00 p.m. (adoption events)</li>
+            <li>Sunday: Closed</li>
+          </ul>
+          <address>
+            Twin Cities Animal Rescue<br>
+            1200 Lakeview Avenue<br>
+            Minneapolis, MN 55401
+          </address>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Twin Cities Animal Rescue, a community nonprofit organization serving Minneapolis, St. Paul, and surrounding communities.</p>
+    <p>Phone: <a href="tel:+16125550147">(612) 555-0147</a> | Email: <a href="mailto:hello@twincitiesanimalrescue.org">hello@twincitiesanimalrescue.org</a></p>
+  </footer>
+</body>
+</html>

@@ -7,6 +7,8 @@
   <title>Adopt, Foster &amp; Volunteer | Twin Cities Animal Rescue</title>
   <link rel="icon" type="image/png" href="images/rescue-logo_c.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/storage.js" defer></script>
+  <script src="js/help-finder.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -27,6 +29,38 @@
   <main id="main">
     <h1>Adopt, Foster, and Volunteer</h1>
     <p class="lead">There is more than one way to change a pet's life. Explore our programs below and find the one that fits you best.</p>
+
+    <section id="help-finder" class="finder" aria-labelledby="finder-heading">
+      <h2 id="finder-heading">Find Your Way to Help</h2>
+      <p>Filter by how you want to help and when you are free, then save the opportunities that interest you. Your saved list is remembered on this device and fills in our interest form for you.</p>
+      <div class="finder-controls">
+        <fieldset class="filter-group">
+          <legend>How would you like to help?</legend>
+          <div class="filter-buttons" id="type-filters"></div>
+        </fieldset>
+        <p class="filter-select">
+          <label for="time-filter">When are you free?</label>
+          <select id="time-filter">
+            <option value="any">Any time</option>
+            <option value="weekday-mornings">Weekday mornings</option>
+            <option value="weekday-evenings">Weekday evenings</option>
+            <option value="weekends">Weekends</option>
+          </select>
+        </p>
+      </div>
+      <div class="finder-layout">
+        <div>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+          <ul id="opportunity-list" class="opportunity-list"></ul>
+        </div>
+        <aside class="interest-panel" aria-labelledby="interest-heading">
+          <h3 id="interest-heading">My Saved Interests</h3>
+          <p id="interest-empty">Nothing saved yet. Choose "Save" on any opportunity to start your list.</p>
+          <ul id="interest-list" class="interest-list"></ul>
+          <p><a id="interest-cta" class="button" href="contact.html" hidden>Send My Interests to the Team</a></p>
+        </aside>
+      </div>
+    </section>
 
     <section>
       <h2>Adoption Process Overview</h2>
