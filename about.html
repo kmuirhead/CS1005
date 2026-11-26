@@ -6,14 +6,15 @@
   <meta name="description" content="The story, core values, and community partners of Twin Cities Animal Rescue.">
   <title>About Us | Twin Cities Animal Rescue</title>
   <link rel="icon" type="image/png" href="images/rescue-logo_c.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a href="#main">Skip to main content</a>
-  <header>
-    <div>
-      <a href="index.html"><img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue home" width="120" height="111"></a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="index.html"><img src="images/rescue-logo_c.png" alt="Twin Cities Animal Rescue home" width="120" height="111"></a>
       <nav aria-label="Main navigation">
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Adopt, Foster &amp; Volunteer</a></li>
           <li><a href="about.html" aria-current="page">About Us</a></li>
@@ -32,10 +33,10 @@
       <p>Today we continue to rely on the generosity of our community to give every animal a safe place to land and a hopeful path to a forever home.</p>
     </section>
 
-    <section>
+    <section class="band">
       <h2>A Message from Our Director</h2>
-      <div>
-        <div>
+      <div class="media-layout">
+        <div class="media-item">
           <video controls playsinline width="640" height="360" preload="metadata" poster="images/rescue-video-poster.jpg">
             <source src="media/rescue-message_c.mp4" type="video/mp4">
             <track kind="captions" src="media/rescue-message_c.vtt" srclang="en" label="English" default>
@@ -45,11 +46,11 @@
               <p>Your browser does not support embedded video or audio. You can <a href="media/rescue-message_c.mp4">download the video</a>, <a href="media/rescue-message_c.mp3">download the audio message</a>, or read the transcript on this page.</p>
             </audio>
           </video>
-          <p>The kind of happy ending our volunteers and foster families make possible.</p>
+          <p class="caption">The kind of happy ending our volunteers and foster families make possible.</p>
         </div>
-        <div>
+        <div class="media-item">
           <h3>Transcript</h3>
-          <blockquote>
+          <blockquote class="transcript">
             <p>"Every animal deserves a loving home. Whether you want to adopt, foster, or volunteer, there's a place for you here. Let's find the perfect match."</p>
           </blockquote>
         </div>
@@ -58,18 +59,18 @@
 
     <section>
       <h2>Our Core Values</h2>
-      <ul>
-        <li><strong>Compassion:</strong> Every animal is treated with kindness, patience, and respect.</li>
-        <li><strong>Trust:</strong> We are transparent with adopters, donors, and partners about how we work.</li>
-        <li><strong>Community:</strong> Rescue is a team effort, and everyone has a role to play.</li>
-        <li><strong>Action:</strong> We act quickly so that pets in need get help when they need it most.</li>
+      <ul class="card-grid values">
+        <li class="card"><strong>Compassion:</strong> Every animal is treated with kindness, patience, and respect.</li>
+        <li class="card"><strong>Trust:</strong> We are transparent with adopters, donors, and partners about how we work.</li>
+        <li class="card"><strong>Community:</strong> Rescue is a team effort, and everyone has a role to play.</li>
+        <li class="card"><strong>Action:</strong> We act quickly so that pets in need get help when they need it most.</li>
       </ul>
     </section>
 
     <section>
       <h2>Partner Acknowledgments</h2>
       <p>We are grateful to the organizations that make our work possible:</p>
-      <ul>
+      <ul class="check-list">
         <li>Lakeside Veterinary Clinic, for discounted medical care</li>
         <li>North Star Pet Supply, for donated food and supplies</li>
         <li>Mississippi Community Foundation, for grant funding</li>
@@ -78,7 +79,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Twin Cities Animal Rescue, a community nonprofit organization serving Minneapolis, St. Paul, and surrounding communities.</p>
     <p>Phone: <a href="tel:+16125550147">(612) 555-0147</a> | Email: <a href="mailto:hello@twincitiesanimalrescue.org">hello@twincitiesanimalrescue.org</a></p>
   </footer>
